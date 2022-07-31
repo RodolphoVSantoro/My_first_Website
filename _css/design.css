@@ -1,0 +1,415 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'fontRB02';
+	src: url('../fonts/RBNo2Light.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body{
+
+background-color:#282875;
+background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.5));
+margin: 10px 0px 10px 0px;
+padding: 0;
+font:14px/1.2 Consolas,Comic Sans, Helvetica,fontRB02 ;
+text-align: center;
+
+}
+
+div#interface{
+-webkit-border: 2px solid;
+-webkit-border-radius: 25px;
+width: 980px;
+margin: 0 auto;
+text-align: left;
+background-color: white;
+
+padding: 10px 10px 10px 10px;
+}
+div#cabecalho{
+
+position: relative;
+width: 980px;
+height: 168px;
+margin-top:80px;
+color:#fff;
+
+text-align:center;
+box-shadow: inset 0 2px 3px 0 rgba(255,255,255,.3), inset 0 -3px 6px 0 rgba(0,0,0,.2), 0 3px 2px 0 rgba(0,0,0,.2);
+background-image: linear-gradient(to bottom, #e0e0f4, #a5a5e1 130%);
+background-color:#a5a5e1;
+background-image: -webkit-linear-gradient(white 2px, transparent 2px),
+-webkit-linear-gradient(0deg, white 2px, transparent 2px),
+-webkit-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+-webkit-linear-gradient(0deg, rgba(255,255,255,.3) 1px, transparent 1px);
+background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-image: -webkit-linear-gradient(white 2px, transparent 2px),
+-webkit-linear-gradient(0deg, white 2px, transparent 2px),
+-webkit-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+-webkit-linear-gradient(0deg, rgba(255,255,255,.3) 1px, transparent 1px);
+background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-image: linear-gradient(white 2px, transparent 2px),
+linear-gradient(90deg, white 2px, transparent 2px),
+linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+
+div#cabecalho h1{
+font:56px fontRB02;
+padding: 40px 40px 40px 40px;
+color:#fff;
+position:absolute;
+left: 620px;
+top: 30px;
+margin-top:-40px;
+
+}
+
+h1{
+font: bold 30px/10px Helvetica, Arial, Sans-serif;
+	text-align: left; color: #eee;
+	text-shadow: 0px 2px 6px #333;
+}
+
+a {
+text-decoration:none;
+}
+
+nav#menu{
+color: #fff;
+font-size:20px;
+text-align:center;
+box-shadow: inset 0 2px 3px 0 rgba(255,255,255,.3), inset 0 -3px 6px 0 rgba(0,0,0,.2), 0 3px 2px 0 rgba(0,0,0,.2);
+background-image: linear-gradient(to bottom, #e0e0f4, #a5a5e1 130%);
+-webkit-border: 1px solid;
+border-radius: 1em 1em 0em 0em;
+padding: 5px 5px 5px 5px;
+
+
+position: relative;
+	width: 990px;
+	top:-258px;
+	z-index:999;
+	left:-10px;
+	
+
+}
+
+
+nav#menu li{
+
+display: inline;
+margin-right: 5px;
+list-style-type: none;
+
+}
+
+nav#menu li a{
+
+
+color: #006;
+font-size: 16px;
+font-weight: bold;
+text-decoration: none;
+text-transform: uppercase;
+padding: 16px; 15px 7px 15px;
+margin-right: 0px;
+transition: 2s;
+opacity: 1;
+
+
+}
+
+nav#menu li a:hover{
+
+background-color: #282875;
+background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
+color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),
+color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent),
+to(transparent));
+background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+transparent 75%, transparent);
+background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+transparent 75%, transparent);
+opacity: 2;
+cursor: pointer;
+color: #fff;
+ -webkit-border: 2px solid;
+-webkit-border-radius: 15px;
+}
+nav#menu ul ul {
+padding:5px 5px 5px 5px;
+display:none;
+background:#e0e0f4;
+position:absolute;
+margin-left:320px;
+top:85%;
+border: 1px solid #fff; 
+width:250px;
+height:165px;
+}
+nav#menu ul li:hover > ul{
+ -webkit-border: 2px solid;
+-webkit-border-radius: 15px;
+display:block;
+} 
+nav#menu ul ul li a {
+padding:5px;
+}
+
+section#corpo{
+    
+width: 500px;
+height: 800px;
+margin: -20px 80px 50px 50px;
+float: left;
+display: inline;
+}
+
+.view {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff url(../images/bgimg.jpg) no-repeat center center
+}
+.view .mask, .view .content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+
+
+.view-sixth img { 
+    transition: all 0.4s ease-in-out 0.5s; 
+}
+.view-sixth .mask{ 
+    background-color: rgba(0,0,81,0.5);
+    opacity:0;
+    transition: all 0.3s ease-in 0.4s;
+}
+.view-sixth h2{
+    opacity:0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    transform: scale(10);
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.view-sixth p { 
+    opacity:0;
+    transform: scale(10);
+    transition: all 0.3s ease-in-out 0.2s;
+}
+
+.view-sixth:hover .mask {  
+    opacity:1; 
+    transition-delay: 0s;
+}                                                                            
+.view-sixth:hover img { 
+    transition-delay: 0s; 
+}
+.view-sixth:hover h2 { 
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.1s;
+}
+.view-sixth:hover p { 
+    opacity:1; 
+    transform: scale(1);
+    transition-delay: 0.2s;
+}
+.view-sixth:hover a.info { 
+    opacity:1;
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+}
+
+footer#rodape {
+-webkit-border: 1px solid;
+border-radius: 0em 0em 1em 1em;
+
+height: 20px;
+clear: both;
+background: #a5a5e1;
+
+}
+
+h2 {
+font-size: 25px;
+color: #0056a6;
+margin: 30px 0 10px 0;
+}
+footer#rodape p {
+
+margin-left: 50px;
+font-size: 11px;
+line-height: 2;
+text-align: center;
+}
+
+section#corpo a, section#corpo a:visited {
+color: #006;
+}
+
+section#corpo a:hover {
+color: #000;
+text-decoration: none;
+}
+
+section#corpo p{
+margin-top: 10px;
+}
+
+section#corpo h2{background-color: #CCCCFF;
+font-size: 25px;
+color: #0056a6;
+margin: 30px 0 10px 0;
+}
+
+table{
+
+border-spacing:0px;
+margin-left:auto;
+margin-right: auto;
+}
+
+table#tabelaspec{
+			border: 1px solid #006;
+			border-spacing: 0px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		table#tabelaspec td{
+			border: 1px solid #006;
+			padding: 5px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		table#tabelaspec td.colesq{
+			color: #ffffff;
+			background-color: #006;
+			vertical-align: top;
+			font-weight: bold;
+			horizontal-align:right;
+			text-align: right;
+		}
+		table#tabelaspec td.coldir{
+			color: white;
+			text-align:left;
+			background-color:#65c;
+		}
+		table#tabelaspec caption{
+			color:#282875;
+			font-size: 13pt;
+			font-weight: bolder;
+		}
+		table#tabelaspec caption span{
+			display: block;
+			float: right;
+			color: #282875;
+			font-size: 8pt;
+			margin-top: 10px;
+		}
+
+figure#auxiliar {
+position: absolute;
+margin-top: 5px;
+
+}
+
+
+aside#lateral{
+display: block;
+height:600px;
+width: 300px;
+float: right;
+margin: -860px 50px 50px 50px;
+background-image: linear-gradient(to bottom, #e0e0f4, #a5a5e1 130%);
+-webkit-border: 4px solid;
+-webkit-border-radius: 25px;
+
+padding: 8px;
+}
+
+aside#lateral2{
+display: block;
+width: 350px;
+float: right;
+margin: -750px 110px -50px -50px;
+
+}
+
+aside#lateral3{
+display: block;
+width: 350px;
+float: right;
+margin: -850px 50px 500px 50px;
+}
+
+h2#lateralh2{
+background-color: #CCCCFF;
+}
+
+
+
+
+.voltarTopo {
+-webkit-border: 2px solid;
+-webkit-border-radius: 25px;
+    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.5));
+    bottom: 20px !important;
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    height: 15px;
+    line-height: 100px;
+    position: fixed;
+    right: 10px;
+    text-transform: uppercase;
+    width: 120px;
+}
+
+
+

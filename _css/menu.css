@@ -1,0 +1,15 @@
+@charset UTF-8;
+
+
+
+section#galeria{
+background:#fff;
+width: 700px;
+height: 600px;
+display: block;
+overflow: hidden;
+box-shadow: #999 0 0 15px;
+margin: 50px auto;
+}
+
+

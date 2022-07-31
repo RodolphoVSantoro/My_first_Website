@@ -1,0 +1,184 @@
+.ball {
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(0,183,229,0.9);
+    opacity: .9;
+    border-top: 5px solid rgba(0,0,0,0);
+    border-left: 5px solid rgba(0,0,0,0);
+    border-radius: 50px;
+    box-shadow: 0 0 35px #2187e7;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    -moz-animation: spin .5s infinite linear;
+    -webkit-animation: spin .5s infinite linear;
+}
+
+.ball1 {
+    background-color: rgba(0,0,0,0);
+    border: 5px solid rgba(0,183,229,0.9);
+    opacity: .9;
+    border-top: 5px solid rgba(0,0,0,0);
+    border-left: 5px solid rgba(0,0,0,0);
+    border-radius: 50px;
+    box-shadow: 0 0 15px #2187e7;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
+    -moz-animation: spinoff .5s infinite linear;
+    -webkit-animation: spinoff .5s infinite linear;
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    };}
+@-moz-keyframes spinoff {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+     -moz-transform: rotate(-360deg);
+    };}
+@-webkit-keyframes spin {
+    0% {
+     -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    };}
+@-webkit-keyframes spinoff {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+   -webkit-transform: rotate(-360deg);
+    };}
+
+body{
+text-align: center;
+font:30px/1.4 Consolas, Arial, Helvetica, sans-serif;
+background-image: url('imagens/turma.jpg');
+}
+h1{
+font: bold 65px/60px Helvetica, Arial, Sans-serif;
+	text-align: center; color: #eee;
+	text-shadow: 0px 2px 6px #333;
+}
+
+
+
+.botao{
+margin-top: 150px;
+margin-left:570px;
+ -webkit-border: 2px solid;
+-webkit-border-radius: 15px;
+display:block;
+position: center;
+color: #006;
+font-size: 16px;
+font-weight: bold;
+text-decoration: none;
+text-transform: uppercase;
+padding: 16px; 15px 7px 15px;
+margin-right: 0px;
+transition: 2s;
+opacity: 1;
+}
+
+
+
+.botao:hover { 
+   background-color: #282875;
+background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
+color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),
+color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent),
+to(transparent));
+background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+transparent 75%, transparent);
+
+opacity: 2;
+cursor: pointer;
+color: #fff;
+ -webkit-border: 2px solid;
+-webkit-border-radius: 15px;
+}
+
+p {
+	display: block; text-decoration: none; margin: 0 0 30px 0;
+	font: italic 45px Georgia, Times, Serif; 
+	text-align: center; color: #bfe1f1;
+	text-shadow: 0px 2px 6px #333;
+  position: relative;
+  padding: 15px;
+  margin-top: 25px;
+  margin-left: 300px;
+  margin-right:300px;
+  color: #000;
+  background: #69c;
+  border-radius: 10px;
+  background: linear-gradient(top, #f9d835, #f3961c);
+}
+
+#page-wrap { width: 720px; margin: 0 auto; padding-top: 100px; }
+
+#well {
+	padding: 14px 20px 20px 20px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	
+	background: -moz-linear-gradient(top, #010101, #181818);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0, #010101),color-stop(1, #181818));
+	
+	border: 2px solid #454545; 
+	overflow: hidden; 
+	
+	-webkit-user-select: none;
+}
+
+h2 {
+  background: -moz-linear-gradient(left, #4d4d4d, 0.4, #4d4d4d, 0.5, white, 0.6, #4d4d4d, #4d4d4d); 
+  background: -webkit-gradient(linear,left top,right top,
+  color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(1, #4d4d4d)); 
+  
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  
+  -webkit-animation: slidetounlock 5s infinite;
+  
+  font-size: 80px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  
+  padding: 0;
+  width: 200%;
+  
+  -webkit-text-size-adjust: none;
+}
+#slider {
+	background: url(../imagens/arrow.png) no-repeat;
+	width: 146px;
+	height: 98px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+}
+
+@-webkit-keyframes slidetounlock {
+	0% {
+		background-position: -720px 0;
+	}
+	100%{
+		background-position: 720px 0;
+	}
+}
