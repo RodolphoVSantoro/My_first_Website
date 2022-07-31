@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="ISO 9001">
+<link rel="stylesheet" type="text/css"
+href="_css/design.css" />
+<link rel="stylesheet" type="text/css"
+href="_css/calendar.css" />
+<title>  
+    CEFET | UnED NI </title>
+	<link rel="icon" href="imagens/icon.gif">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+var $j = jQuery.noConflict();
+$j(document).ready(function() {
+$j(".voltarTopo").hide();
+$j(function () {
+$j(window).scroll(function () {
+if ($j(this).scrollTop() > 300) {
+$j('.voltarTopo').fadeIn();
+} else {
+$j('.voltarTopo').fadeOut();
+}
+});
+$j('.voltarTopo').click(function() {
+$j('body,html').animate({scrollTop:0},600);
+}); 
+    });});
+    
+    
+</script>
+</head>
+
+<body id="voltarTopo">
+
+<div id="interface">
+
+<div id="cabecalho">
+
+<div><h1>UnED Nova Iguaçu<h1></div>
+
+<figure id="auxiliar">
+<img src="imagens/CEFET-RJ.png" />
+</figure>
+
+</div>
+
+<nav id="menu">
+  <ul>
+    <li><a href="cefetindex.html">Home</a></li> 
+    <li><a href="1info.html">Informática</a>
+		<ul>
+		<li><a href="arq.html">Arquitetura</a></li>
+		<li><a href="prog.html">Programação</a></li>
+		<li><a href="fa.html">Ferramenta de Apoio</a></li>
+		<li><a href="web.html">Desenvolvimento WEB</a></li>
+		</ul>
+	</li>
+	<li><a href="manual.html">Utilidades</a></li>	
+  	<li><a href="jogo.html">Jogo</a></li>
+  </ul>  
+</nav>
+
+		<style type="text/css">
+			canvas {
+			  border: 1px solid #000000;
+			}
+			canvas{
+			background-image:url('imagens/fundo.jpg');
+			}
+			canvas{
+				position:relative;
+				left: 180px;
+                        }
+		
+		</style>
+    </head>   
+    <body  onload="inicializar()">
+		<section id="Instrucoes_jogo">
+						<p>Instruções do jogo:</p>
+						<p>Aperte as setas para a direita e para a esquerda para movimentar a tarja e coletar as bolas que caem</p>
+		</section>
+		<canvas id="canvas" width="600" height="480">
+			Navegador não suporta HTML5
+		</canvas>
+		
+		<script type="text/javascript">
+		
+			var barraAltura, barraLargura, jogadorPosicaoX, velocidadeJogador, pontosJogador;
+		
+			var diametros = new Array(
+				{'diametro' : 7, 'pontos' : 1},
+				{'diametro' : 10, 'pontos' : 2},
+				{'diametro' : 15, 'pontos' : 3}
+			);
+			
+			function bola()
+			{
+				var index = Math.round(Math.random() * (3 - 1) + 1) - 1;
+                this.bolaDiametro = diametros[index]['diametro'];
+				this.pontos = diametros[index]['pontos'];
+				
+                this.bolaPosX = Math.random() * 600;
+                this.bolaPosY = -10;
+				this.velocidadeBola = Math.random() * (10 - 6) + 6;
+				this.colisao = false;
+			}
+		
+			function inicializar()
+			{
+				barraAltura = 15;
+				barraLargura = 90;
+				
+				pontosJogador = 0;
+				jogadorPosicaoX = (canvas.width - barraLargura) / 2;
+				velocidadeJogador = 20;
+				
+				canvas = document.getElementById("canvas");
+				context = canvas.getContext("2d");				
+				
+				primeira = new bola()
+				bolas = new Array(primeira);
+				
+				document.addEventListener('keydown', keyDown);
+				
+				setInterval(gameLoop, 30);
+			}
+			
+			function keyDown(e) 
+			{
+				if(e.keyCode == 37)
+				{
+					if(jogadorPosicaoX > 0)
+					{
+						jogadorPosicaoX -= velocidadeJogador;
+					}
+				}
+				
+				if(e.keyCode == 39)
+				{
+					if(jogadorPosicaoX < (canvas.width - barraLargura))
+					{
+						jogadorPosicaoX += velocidadeJogador;
+					}
+				}
+			}
+			
+			function gameLoop()
+			{
+				//Limpa Tela
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				
+				// Checar bolas
+				if(bolas.length <= 0)
+				{
+					bolas.push(new bola());
+				}
+				
+				// Bolas				
+				bolas.forEach(function(b, index)
+				{
+					context.beginPath();
+	                context.arc(b.bolaPosX, b.bolaPosY, b.bolaDiametro, 0, Math.PI * 2, true);
+	                context.fill();
+					
+					// Criar nova bola?
+					if(b.bolaPosY >= 50 && bolas.length <= 2)
+					{
+						bolas.push(new bola());
+					}
+					
+					if(b.bolaPosY <= canvas.height)
+					{
+						b.bolaPosY += b.velocidadeBola;
+					}
+					else
+					{
+						bolas.splice(index, 1);
+					}
+					
+					// Checar Colisão
+					if((b.bolaPosX > jogadorPosicaoX && b.bolaPosX < jogadorPosicaoX + barraLargura) && b.bolaPosY >= canvas.height - barraAltura && b.colisao == false)
+					{
+						pontosJogador += b.pontos;
+						b.colisao = true;
+					}
+				});
+				
+				// Escreve placar
+                context.font = "32pt Tahoma";
+				context.fillText(pontosJogador, canvas.width - 70, 50);
+				
+				// Jogador
+				context.fillRect(jogadorPosicaoX, canvas.height - barraAltura, barraLargura, barraAltura);
+			}
+					</script>
+
+
+<input type="button" class="voltarTopo" onclick="$j('html,body').animate({scrollTop: $j('#voltarTopo').offset().top}, 2000);" value="Voltar ao topo"
+/>
+
+<footer id="rodape">
+		<p>Copyright &copy; 2014 - by Daniel Romanini, Rodolpho Santoro e Barbara Rachel 1INFO</p> 
+		
+		
+	</footer>
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="ISO 9001">
+<link rel="stylesheet" type="text/css"
+href="_css/design.css" />
+<link rel="stylesheet" type="text/css"
+href="_css/calendar.css" />
+<title>  
+    CEFET | UnED NI </title>
+	<link rel="icon" href="imagens/icon.gif">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+var $j = jQuery.noConflict();
+$j(document).ready(function() {
+$j(".voltarTopo").hide();
+$j(function () {
+$j(window).scroll(function () {
+if ($j(this).scrollTop() > 300) {
+$j('.voltarTopo').fadeIn();
+} else {
+$j('.voltarTopo').fadeOut();
+}
+});
+$j('.voltarTopo').click(function() {
+$j('body,html').animate({scrollTop:0},600);
+}); 
+    });});
+    
+    
+</script>
+</head>
+
+<body id="voltarTopo">
+
+<div id="interface">
+
+<div id="cabecalho">
+
+<div><h1>UnED Nova Iguaçu<h1></div>
+
+<figure id="auxiliar">
+<img src="imagens/CEFET-RJ.png" />
+</figure>
+
+</div>
+
+<nav id="menu">
+  <ul>
+    <li><a href="cefetindex.html">Home</a></li> 
+    <li><a href="1info.html">Informática</a>
+		<ul>
+		<li><a href="arq.html">Arquitetura</a></li>
+		<li><a href="prog.html">Programação</a></li>
+		<li><a href="fa.html">Ferramenta de Apoio</a></li>
+		<li><a href="web.html">Desenvolvimento WEB</a></li>
+		</ul>
+	</li>
+	<li><a href="manual.html">Utilidades</a></li>
+	<li><a href="jogo.html">Jogo</a></li>	
+  </ul>  
+</nav>
+
+
+
+
+		<section id="corpo">
+		
+<h2>Primeira Unidade Descentralizada do CEFET/RJ</h2>
+	<p> Inaugurada em Agosto de 2003, O UnED conta com uma vasta
+área de aproximadamente 68.700m², sendo que desses, apenas 7.367m² de área construída.</p>
+
+	<p> Esta Unidade possui 20 salas de aula, 27 laboratórios e oficinas, um auditório e um anfiteatro, 
+uma biblioteca, quadras em construção, entre outros espaços de natureza educativa. 
+Conta também com instalações administrativas, uma cantina e o futuro "Bandeijão",além de uma unidade de 
+acompanhamento pedagógico e orientação educacional.</p>
+ 
+<p>Desde sua inauguração,a unidade, vem assumindo a missão institucional do CEFET/RJ, 
+de promover a educação mediante atividades de ensino, pesquisa e extensão que propiciem, de modo reflexivo e 
+crítico, na interação com a sociedade, a formação integral (humanística, científica e tecnológica, ética, política e 
+social) de profissionais capazes de contribuir para o desenvolvimento cultural, tecnológico e econômico 
+dessa mesma sociedade.</p>
+
+<h2> Onde o UnED NI se destaca? </h2>
+	<p> Ele se destaca em diversas áreas, como por exemplo, no aproveitamento em concursos públicos,
+no alto nível da formação técnica e média,podendo escolher 
+entre 4 opções: Informática, Automação Industrial, Tecomunicações e Enfermagem.</p>
+
+
+</section>
+
+<div class="view view-sixth">  
+     <img src="imagens/ni_frente.png" />  
+     <div class="mask">  
+     <h2>Cefet Nova Iguaçu</h2>  
+     <p>Vista parcial dos três blocos que compõem a unidade.</p>   
+     </div>  
+</div>  
+
+<div class="view view-sixth">  
+     <img src="imagens/cirto.jpg" />  
+     <div class="mask">  
+     <h2>Palestra</h2>  
+     <p>Palestra explicativa sobre o curso de informática e sua influencia na sociedade
+     concedida pelo Prof. Francisco Eduardo Cirto</p>   
+     </div>  
+</div>  
+
+<div class="view view-sixth">  
+     <img src="imagens/Mapa.jpg" />  
+     <div class="mask">  
+     <h2>Mapa</h2>  
+     <p>Mapa das unidades de conservação ambiental de Nova Iguaçu, o Cefet, se encontra próximo a região da reserva
+     do tinguá (verde escuro) , especificamente, nas proximidades de Vila de Cava.</p>   
+     </div>  
+</div>  
+
+
+<input type="button" class="voltarTopo" onclick="$j('html,body').animate({scrollTop: $j('#voltarTopo').offset().top}, 2000);" value="Voltar ao topo"
+/>
+
+<footer id="rodape">
+		<p>Copyright &copy; 2014 - by Daniel Romanini, Rodolpho Santoro e Barbara Rachel 1INFO</p> 
+		
+		
+</footer>
+
+</div>
+</body>
+
+</html>

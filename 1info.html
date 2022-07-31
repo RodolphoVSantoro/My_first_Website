@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="ISO 9001">
+<link rel="stylesheet" type="text/css"
+href="_css/design2.css" />
+
+
+<title> 
+   CEFET | UnED NI </title>
+   <link rel="icon" href="imagens/icon.gif">
+   
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+
+
+var $j = jQuery.noConflict();
+$j(document).ready(function() {
+$j(".voltarTopo").hide();
+$j(function () {
+$j(window).scroll(function () {
+if ($j(this).scrollTop() > 300) {
+$j('.voltarTopo').fadeIn();
+} else {
+$j('.voltarTopo').fadeOut();
+}
+});
+$j('.voltarTopo').click(function() {
+$j('body,html').animate({scrollTop:0},600);
+}); 
+    });});
+    
+
+</script>
+</head>
+
+<body>
+<div id="interface">
+<div id="cabecalho">
+
+<div class="textoanimado"><h1>UnED Nova Iguaçu<h1></div>
+
+<figure id="auxiliar">
+<img src="imagens/CEFET-RJ.png" />
+</figure>
+
+
+  
+</div> 
+
+<nav id="menu">
+  <ul>
+    <li><a href="cefetindex.html">Home</a></li> 
+    <li><a href="1info.html">Informática</a>
+		<ul>
+		<li><a href="arq.html">Arquitetura</a></li>
+		<li><a href="prog.html">Programação</a></li>
+		<li><a href="fa.html">Ferramenta de Apoio</a></li>
+		<li><a href="web.html">Desenvolvimento WEB</a></li>
+		</ul>
+	</li>
+	<li><a href="manual.html">Utilidades</a></li>
+	<li><a href="jogo.html">Jogo</a></li>	
+  </ul>  
+</nav>
+<section id="corpo">
+
+<h2 id="text">Sobre o Curso </h2>
+
+	<p> O curso Técnico em Informática tem como objetivo preparar profissionais 
+que possam trabalhar de forma ampla no ambiente de Tecnologia de Informação.
+ O curso abrange as cinco grandes áreas de Informática 
+(Arquitetura de Computadores e Sistemas Operacionais, 
+Linguagens de Programação e Estrutura de Dados, 
+Banco de Dados, Rede de Computadores e Análise e Modelagem de Sistemas). 
+As disciplinas oferecidas apresentam características contextualizadas da Ciência da Computação 
+para o nível técnico e dentro das perspectivas esperadas pelo mercado.</p> 
+	<p> O curso de informática,conta com a seguinte estrutura:<br>
+1 Laboratório de Informática (Redes)<br>
+2 Laboratórios de Informática (Software)<br>
+1 Laboratório de Informática (Hardware – Manutenção)</p>
+
+<p>Nós, do 1º ano, contamos com as matérias de:,<br> Arquitetura de Computadores, Linguagem de
+Programação, Ferramenta de Apoio e Desenvolvimento de Aplicações WEB. 
+
+</section>
+
+
+
+<aside id="lateral">
+
+<h2> Empregos existêntes e faixa salarial </h2>
+
+<p> Os empregos existêntes na área de TI são os que mais crecem a cada ano, 
+amplamente ligados a área da informação, segue abaixo a tabela de 5 dos variados
+empregos e seus respectivos salários.<br><span>O salário pode variar de empresa para empresa.</span></p>
+
+<table id="tabelaspec">
+<caption>Tabela de Empregos e Faixa Salarial na Informática <span>Dez/2014</span></capition>
+
+<tr><td class="colesq">Gerente de e-commerce</td><td class="coldir">R$ 15.156</td></tr>
+<tr><td class="colesq">Webmaster</td><td class="coldir"> R$ 6.800</td></tr>
+<tr><td class="colesq">Webdesigner</td><td class="coldir">R$ 5.457</td></tr>
+<tr><td class="colesq">Gerente de projetos<br> de sistemas</td><td class="coldir">R$ 15.596 </td></tr>
+<tr><td class="colesq">Gerente de administração<br> de Banco de Dados</td><td class="coldir">R$ 7.870  </td></tr>
+</table>
+
+</aside>
+
+<input type="button" class="voltarTopo" onclick="$j('html,body').animate({scrollTop: $j('#voltarTopo').offset().top}, 2000);" value="Voltar ao topo" >
+
+<footer id="rodape">
+		<p>Copyright &copy; 2014 - by Daniel Romanini, Rodolpho Santoro e Barbara Rachel 1INFO</p>
+</footer>
+
+</div> 
+
+</body>
+</html>

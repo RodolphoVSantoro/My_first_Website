@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css"
+href="_css/design.css" />
+<link rel="stylesheet" type="text/css"
+href="_css/design3.css" />
+<title>  
+    CEFET | UnED NI </title>
+	<link rel="icon" href="imagens/icon.gif">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+var $j = jQuery.noConflict();
+$j(document).ready(function() {
+$j(".voltarTopo").hide();
+$j(function () {
+$j(window).scroll(function () {
+if ($j(this).scrollTop() > 300) {
+$j('.voltarTopo').fadeIn();
+} else {
+$j('.voltarTopo').fadeOut();
+}
+});
+$j('.voltarTopo').click(function() {
+$j('body,html').animate({scrollTop:0},600);
+}); 
+    });});
+</script>
+</head>
+
+<body>
+
+<div id="interface">
+
+<div id="cabecalho">
+
+<div class="textoanimado"><h1>UnED Nova Iguaçu<h1></div>
+
+<figure id="auxiliar">
+<img src="imagens/CEFET-RJ.png" />
+</figure>
+
+</div>
+
+
+<nav id="menu">
+  <ul>
+    <li><a href="cefetindex.html">Home</a></li> 
+    <li><a href="1info.html">Informática</a>
+		<ul>
+		<li><a href="arq.html">Arquitetura</a></li>
+		<li><a href="prog.html">Programação</a></li>
+		<li><a href="fa.html">Ferramenta de Apoio</a></li>
+		<li><a href="web.html">Desenvolvimento WEB</a></li>
+		</ul>
+	</li>
+	<li><a href="manual.html">Utilidades</a></li>
+	<li><a href="jogo.html">Jogo</a></li>	
+  </ul>  
+</nav>
+<body>
+<section id="corpo">
+
+<h2> Manual do Aluno - Última atualização 2012</h2>
+
+<p> O Manual do Aluno serve de guia e acesso aos principais procedimentos e entidades da escola: aos direitos e deveres dos alunos,
+ informações sobre avaliação,uniformes,uso de determinados ambientes escolares,setores da instituição,e etc.</p>
+ 
+ <p>Além disso, é uma forma do próprio aluno, calouro ou veterano, 
+ a se familiarizar com a instituição e aos demais servidores nela presentes.</p>
+ 
+ <h3>Segue abaixo em anexo, o último edital do manual do aluno(2012):</h3>
+<a href="medio_2012.pdf" target="_blank"><img src="imagens/pdf.png">&nbsp;Manual do Aluno</a>
+
+<div id="form-main">
+<div id="form-div">
+<form class="form" id="form1">
+      
+<p class="name">
+<input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+</p>
+      
+<p class="email">
+<input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+</p>
+      
+<p class="text">
+<textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+</p>
+      
+      
+
+<div class="submit">
+<input type="submit" value="Send Email" id="button-blue"/>
+<form method="post" action="mailto:romanini_2010@hotmail.com" >
+<div class="ease"></div>
+</div>
+</form>
+</div>
+  
+</section>
+<aside id="lateral3">
+<h2 id="lateralh2">Telefones e Endereços</h2>
+<h3>Unidade Maracanã</h3>
+<p>Av. Maracanã 229 - Maracanã - CEP:20271-110
+Rio de Janeiro - RJ - Brasil 
+Tel: +55 21 2566-3022<p>
+
+<h3>UnED Nova Iguaçu</h3>
+<p>Estrada de Adrianópolis, 1317 - Santa Rita
+Nova Iguaçu - RJ - Brasil
+CEP:26041-271
+Tel: +55 21 2886-8916</p>
+
+<h3>UnED Maria da Graça</h3>
+<p>Rua Miguel Ângelo, 96 - Maria da Graça
+Rio de Janeiro - RJ - Brasil
+CEP:20785-220
+Tel: +55 21 3278-5502</p>
+
+<h3>UnED Petrópolis</h3>
+<p>Antigo Fórum - Rua do Imperador, 971 - Centro Histórico
+Petrópolis - RJ - Brasil
+CEP:25620-003
+Tel: +55 24 2242-5716</p>
+
+<h3>UnED Nova Friburgo</h3>
+<p>Av. Roberto Silveira, 1900 - Duas Pedras
+CEP:28635-000
+Nova Friburgo - RJ - Brasil
+Tel: +55 22 2527-1727</p>
+
+<h3>Campus Itaguaí</h3>
+<p>Rodovia Mário Covas, lote J2, quadra J - Distrito Industrial de Itaguaí
+CEP 23810-000
+Itaguaí – RJ - Brasil
+Tel/Fax: +55 21 2688-1847</p>
+</aside>
+
+<input type="button" class="voltarTopo" onclick="$j('html,body').animate({scrollTop: $j('#voltarTopo').offset().top}, 2000);" value="Voltar ao topo" >
+
+<footer id="rodape">
+		<p>Copyright &copy; 2014 - by Daniel Romanini, Rodolpho Santoro e Barbara Rachel 1INFO</p> 
+
+</footer>
+
+</div>
+</body>
+
+</html>
